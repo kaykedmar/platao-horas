@@ -4,95 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Platao JavaScript</title>
-  <style>
-
-    body { 
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      background-color: rgb(48, 52, 54);
-      background-image: url('bodyfundo.jpg');
-      background-position: center center;
-      height: 98vh;
-    }
-
-    main  { 
-      display: flex;
-      flex-direction: column;
-      margin-left: 50px;
-      padding: 30px;
-      border-radius: 30px;
-      border: 1px solid rgb(146, 1, 122);
-      box-shadow: 0px 0px 5px rgb(141, 33, 230);
-      width: 600px;
-      background-color: rgba(0, 0, 0, 0.418);
-    }
-
-    /* Alinhamento no Centro  */
-    .js-platao-horas { 
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-
-    }
-    
-    .horas-dias { 
-      display: flex;
-      flex-direction: column;
-    }
-
-    h2, h3 { 
-      color: white;
-      border-bottom: 1px solid rgb(141, 33, 230);
-     
-    }
-
-    /* Photo */
-    #platao-js { 
-      border-radius: 50%;
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      margin-right: 20px;
-    }
-
-    /* Tamanho da Hora mostrada */
-    #js-hours { 
-      font-size: 40px;
-      margin: 0;
-    }
-
-    #js-aviso { 
-      margin: 0;
-    }
- 
-    #js-days { 
-      margin: 0;
-    }
-
-    p { 
-      font-size: 20px;
-      color: white;
-    }
-    
-    @media (max-width: 768px) { 
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        
-      }
-      main { 
-        display: inline-block;
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-    }
-
-   
-
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="platao.webp" type="image/x-icon">
 </head>
 <body>
 
@@ -108,9 +21,9 @@
 </div>
 
   <div class="sobre-platao">
-  <h2>Conheça Platao</h2>
+  <h2>Conheça Platão</h2>
   <p>
-    Biografia de Platão
+    Biografia de Platão,
     Platão (427-347 a.C.) foi um filósofo grego da antiguidade, considerado um dos principais pensadores da história da filosofia. Era discípulo do filósofo Sócrates.
     
   </p>
@@ -128,24 +41,7 @@
   <p>Por tradição de família, Platão desejava dedicar-se à vida pública e fazer uma brilhante carreira politica, como descreveu em uma de suas muitas cartas.</p>
 </div>
 </main>
+  <script src="script.js"></script>
 
-
-  <script>
-       horasSegundos()
-  
-    function horasSegundos() { 
-      const dataAtual = new Date();
-      
-      const hora = dataAtual.getHours();
-      const minutos = dataAtual.getMinutes();
-      const days = dataAtual.getFullYear(); 
-      document.querySelector("#js-hours").innerHTML = hora + ":" + minutos;
-      document.getElementById("js-days").innerHTML = days
-     
-      if (hora < 20) { 
-        document.getElementById("js-photo").src='img/segundoplatao.webp'; 
-      } 
-      }
-  </script>
 </body>
 </html>
